@@ -6,11 +6,11 @@ public class ConsoleExercises {
 //        double pi = 3.14159;
 //        System.out.println(pi);
 //
-//        System.out.printf("The value of pi is approximately, %s.", pi);
+//        System.out.printf("The value of pi is approximately, %.2f.%n", pi); // the .2f cuts off the number after 2 decimal places
 
-//        Scanner scanner = new Scanner(System.in);
+//        Scanner questionone = new Scanner(System.in);
 //        System.out.println("enter a number");
-//        int userInput = scanner.nextInt(); // this breaks if you put anything but a integer(whole number) in there
+//        int userInput = questionone.nextInt(); // this breaks if you put anything but a integer(whole number) in there
 //        System.out.println("You entered: \"" + userInput + "\" ");
 
 //        Scanner questiontwo = new Scanner(System.in);
