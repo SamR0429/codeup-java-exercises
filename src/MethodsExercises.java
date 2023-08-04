@@ -1,4 +1,6 @@
+import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.LinkedBlockingDeque;
 
 public class MethodsExercises {
 //    public static String sayHello(String name) {
@@ -10,7 +12,7 @@ public class MethodsExercises {
 //    }
 //
 
-//    // version 1
+    // version 1
 //    public static void sayHello(int times) {
 //        for (int i = 0; i < times; i += 1) {
 //            sayHello();
@@ -75,13 +77,21 @@ public class MethodsExercises {
 //        return num1 % num2;
 //    }
 
-    // question two
-    public static int getInteger(int min, int max) {
-        return min + max;
-    }
+    // question 2
 
 
+
+
+
+
+
+
+
+
+    //--------------------------------------------------------------------------------------------
     public static void main(String[] args) {
+
+        //--------------------------------------------------------------------------------------------
 
 //        sayHello(3);
 //        sayHello();
@@ -124,12 +134,63 @@ public class MethodsExercises {
         //question two
 
 
-        Scanner forGettingInteger = new Scanner(System.in);
+//        Scanner forGettingInteger = new Scanner(System.in);
+////
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//
+//        System.out.println("your number is: " + getInteger(1,10));
+//
+//        //question 3
+//        int factorial = getInteger(1, 10);
+        boolean quit = false;
+//        while(!quit){
+//            System.out.println("the factorial of " + factorial + "is" + getFactorial(factorial));
+//            System.out.println("do you want to continue? [y/n]");
+//            quit = quit();
+//        }
+        quit = false;
 
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
+        while(!quit){
+            System.out.println("how many sides do you want on your die?");
+            int faces = getInteger(1, 100);
+            System.out.println("result 1 is " + rollDice(faces) + "\nresult 2 is " + rollDice(faces));
+            System.out.println("Do you want to continue? [y/n]");
+            quit = quit();
+        }
 
+    }
+        private static boolean quit(){
+            Scanner scan = new Scanner(System.in);
+            String input = scan.nextLine();
+            return Character.toLowerCase(input.charAt(0)) != 'y';
+        }
 
+        private static long getFactorial(int factorial){
+            long result = 1;
+            for(int i =1; i <= factorial; i++){
+                result *= i;
+            }
+            return result;
+        }
 
+    public static int getInteger(int min, int max) {
+
+        Scanner scan = new Scanner(System.in);
+        int input;
+
+        do {
+            System.out.println("please enter a integer between " + min + " and " + max + ".");
+            input = scan.nextInt();
+        }while (!isInRange(input, min, max));
+
+        return input;
+    }
+    public static boolean isInRange(int input, int min, int max){
+        return input <= max && input >= min;
+    }
+
+    public static int rollDice (int totalSides){
+        return new Random().nextInt(1, totalSides);
     }
 }
