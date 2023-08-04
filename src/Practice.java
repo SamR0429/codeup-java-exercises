@@ -19,20 +19,20 @@ public class Practice {
 
     public static void main(String[] args) {
 
-        int width = 4;
-        int length = 10;
-
-        System.out.println(calculateP(width, length));
-        System.out.println(calculateA(width, length));
+//        int width = 4;
+//        int length = 10;
+//
+//        System.out.println(calculateP(width, length));
+//        System.out.println(calculateA(width, length));
     }
 
-    public static int calculateP (int width, int length){
-        return (width * 2)+(length * 2);
-    }
-
-    public static int calculateA (int width, int length){
-        return (width * length);
-    }
+//    public static int calculateP (int width, int length){
+//        return (width * 2)+(length * 2);
+//    }
+//
+//    public static int calculateA (int width, int length){
+//        return (width * length);
+//    }
 
 
 
