@@ -20,6 +20,10 @@ public class Input {
         String userInput = scanner.nextLine();
         return userInput.startsWith("y") || userInput.startsWith("Y");
 
+        /* this was steves way, obviously better
+        return this.getString().trim().toLowerCase().startsWith("y");
+       */
+
     }
 
     public int getInt(int min, int max) {
